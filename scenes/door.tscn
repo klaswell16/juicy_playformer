@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0ega4vjsklap"]
+
+[ext_resource type="Script" uid="uid://dxepuyo1b61i2" path="res://scripts/door.gd" id="1_vrwkx"]
+[ext_resource type="Texture2D" uid="uid://cljgjdybjntba" path="res://sprites/idle_portal.png" id="2_uvdjg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i34ps"]
+
+[node name="Door" type="Area2D"]
+script = ExtResource("1_vrwkx")
+scene_to_load = "res://platformer/scenes/p_level_1.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_i34ps")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_uvdjg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

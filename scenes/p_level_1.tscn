@@ -1,0 +1,177 @@
+[gd_scene load_steps=12 format=4 uid="uid://m2nto4qrq5sw"]
+
+[ext_resource type="Texture2D" uid="uid://dj61u8wimdb7n" path="res://tilemap_packed.png" id="1_bs2ip"]
+[ext_resource type="PackedScene" uid="uid://bsrj0rjjr0j3p" path="res://scenes/platformer_player.tscn" id="2_yps6v"]
+[ext_resource type="PackedScene" uid="uid://llqyr2gno3j4" path="res://scenes/ui.tscn" id="4_7k5xu"]
+[ext_resource type="Texture2D" uid="uid://3ujiguu8ii5v" path="res://sprites/sky.png" id="4_k3v11"]
+[ext_resource type="Texture2D" uid="uid://de0xhf05nj0va" path="res://clouds_bg.png" id="5_t3gwi"]
+[ext_resource type="Texture2D" uid="uid://dol74x7vejgl3" path="res://clouds_mg_1_lightened.png" id="6_6pu31"]
+[ext_resource type="PackedScene" uid="uid://c5u722066v58h" path="res://scenes/key.tscn" id="7_pfjqn"]
+[ext_resource type="PackedScene" uid="uid://c0ega4vjsklap" path="res://scenes/door.tscn" id="8_lsesv"]
+[ext_resource type="PackedScene" uid="uid://cip55p4q7bocg" path="res://scenes/enemy.tscn" id="9_lsesv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k3v11"]
+texture = ExtResource("1_bs2ip")
+texture_region_size = Vector2i(18, 17)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.91861, -6.73851, 9.01771, -6.54032, 9.01771, 7.23399, -9.01771, 7.72947)
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+7:1/0 = 0
+4:5/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+7:4/0 = 0
+7:3/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+9:0/0 = 0
+9:2/0 = 0
+9:3/0 = 0
+8:4/0 = 0
+8:3/0 = 0
+8:5/0 = 0
+8:6/0 = 0
+7:6/0 = 0
+6:6/0 = 0
+5:6/0 = 0
+4:6/0 = 0
+3:6/0 = 0
+2:6/0 = 0
+1:6/0 = 0
+0:6/0 = 0
+0:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+9:6/0 = 0
+9:5/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+11:3/0 = 0
+11:2/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+10:6/0 = 0
+10:7/0 = 0
+11:5/0 = 0
+11:6/0 = 0
+11:7/0 = 0
+12:1/0 = 0
+12:2/0 = 0
+12:3/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+10:2/0 = 0
+10:3/0 = 0
+10:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_t3gwi"]
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_k3v11")
+
+[node name="PLevel1" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAFAAcAAAACAAAAAAAGAAcAAAACAAAAAAAHAAcAAAACAAAAAAAIAAcAAAACAAAAAAAJAAcAAAACAAAAAAAKAAcAAAACAAAAAAALAAcAAAACAAAAAAAMAAcAAAACAAAAAAANAAcAAAACAAAAAAAOAAcAAAACAAAAAAAPAAcAAAACAAAAAAAQAAcAAAACAAAAAAARAAcAAAACAAAAAAASAAcAAAACAAAAAAATAAcAAAACAAAAAAAUAAcAAAACAAAAAAAVAAcAAAACAAAAAAAWAAcAAAACAAAAAAAXAAcAAAACAAAAAAAYAAcAAAACAAAAAAAZAAcAAAACAAAAAAAaAAcAAAACAAAAAAAbAAcAAAACAAAAAAAcAAcAAAACAAAAAAAcAAYAAAACAAAAAAAdAAYAAAACAAAAAAAeAAYAAAACAAAAAAAeAAcAAAACAAAAAAAfAAcAAAACAAAAAAAgAAcAAAACAAAAAAAhAAcAAAACAAAAAAAhAAgAAAACAAAAAAAiAAgAAAACAAAAAAAiAAcAAAACAAAAAAAjAAcAAAACAAAAAAAkAAcAAAACAAAAAAAlAAcAAAACAAAAAAAmAAcAAAACAAAAAAAmAAYAAAACAAAAAAAmAAUAAAACAAAAAAAmAAQAAAACAAAAAAAnAAQAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_t3gwi")
+
+[node name="PlatformerPlayer" parent="." instance=ExtResource("2_yps6v")]
+position = Vector2(129, 83)
+collision_layer = 1
+collision_mask = 2
+
+[node name="UI" parent="." instance=ExtResource("4_7k5xu")]
+script = null
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(706.56, 400)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2(1.84375, 1.89815)
+texture = ExtResource("4_k3v11")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(706, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(1.84375, 1.87037)
+texture = ExtResource("5_t3gwi")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(706, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+scale = Vector2(1.84, 1.84)
+texture = ExtResource("6_6pu31")
+
+[node name="Key" parent="." instance=ExtResource("7_pfjqn")]
+position = Vector2(295, 95)
+
+[node name="Door" parent="." instance=ExtResource("8_lsesv")]
+position = Vector2(626, 39)
+scene_to_load = "res://scenes/p_level_2.tscn"
+
+[node name="Enemy" parent="." instance=ExtResource("9_lsesv")]
+position = Vector2(546, 77)
+collision_layer = 2
+collision_mask = 2
