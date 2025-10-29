@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://csom2jh70dfir"]
+
+[ext_resource type="Script" uid="uid://c81uo5hlnjumd" path="res://scenes/start_screen_bg.gd" id="1_hm208"]
+[ext_resource type="Texture2D" uid="uid://cw1bx77vxuhfg" path="res://1.png" id="1_r2jwc"]
+[ext_resource type="Script" uid="uid://ckas0axsu4lm2" path="res://scripts/menu_control.gd" id="1_tx5wa"]
+[ext_resource type="Texture2D" uid="uid://08x7jrgfd7b8" path="res://2.png" id="2_hm208"]
+[ext_resource type="Texture2D" uid="uid://b5g6085wg2681" path="res://4.png" id="3_5pab1"]
+
+[sub_resource type="FontVariation" id="FontVariation_tx5wa"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hm208")
+
+[node name="BackgroundFar" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -738.0
+offset_top = -395.0
+offset_right = 853.0
+offset_bottom = 578.0
+texture = ExtResource("1_r2jwc")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BackgroundMid" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -742.0
+offset_top = -393.0
+offset_right = 851.0
+offset_bottom = 703.0
+texture = ExtResource("2_hm208")
+
+[node name="BackgroundClose" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -737.0
+offset_top = -393.0
+offset_right = 858.0
+offset_bottom = 578.0
+texture = ExtResource("3_5pab1")
+
+[node name="Menu" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_tx5wa")
+
+[node name="Title" type="Label" parent="Menu"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 148.0
+offset_right = 735.0
+offset_bottom = 222.0
+theme_override_fonts/font = SubResource("FontVariation_tx5wa")
+theme_override_font_sizes/font_size = 54
+text = "Knighthood"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 421.0
+offset_right = 693.0
+offset_bottom = 494.0
+text = "Begin"
+
+[node name="QuitButton" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 544.0
+offset_right = 689.0
+offset_bottom = 604.0
+text = "Quit"
+
+[connection signal="pressed" from="Menu/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Menu/QuitButton" to="." method="_on_quit_button_pressed"]
