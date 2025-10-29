@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=22 format=3 uid="uid://d3kghq2eh0gdb"]
+[gd_resource type="SpriteFrames" load_steps=23 format=3 uid="uid://d3kghq2eh0gdb"]
 
 [ext_resource type="Texture2D" uid="uid://dsfxphv8rkcg0" path="res://sprites/knight.png" id="1_sdk4b"]
 
@@ -17,6 +17,10 @@ region = Rect2(64, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_s41x2"]
 atlas = ExtResource("1_sdk4b")
 region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnbge"]
+atlas = ExtResource("1_sdk4b")
+region = Rect2(64, 160, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sdk4b"]
 atlas = ExtResource("1_sdk4b")
@@ -84,11 +88,6 @@ region = Rect2(224, 96, 32, 32)
 
 [resource]
 animations = [{
-"frames": [],
-"loop": true,
-"name": &"attack",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4nq8g")
@@ -104,6 +103,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnbge")
+}],
+"loop": true,
+"name": &"on_wall",
 "speed": 5.0
 }, {
 "frames": [{
