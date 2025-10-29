@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://csom2jh70dfir"]
 
-[ext_resource type="Script" uid="uid://c81uo5hlnjumd" path="res://scenes/start_screen_bg.gd" id="1_hm208"]
+[ext_resource type="Script" uid="uid://c81uo5hlnjumd" path="res://start_screen_bg.gd" id="1_hm208"]
 [ext_resource type="Texture2D" uid="uid://cw1bx77vxuhfg" path="res://1.png" id="1_r2jwc"]
 [ext_resource type="Script" uid="uid://ckas0axsu4lm2" path="res://scripts/menu_control.gd" id="1_tx5wa"]
 [ext_resource type="Texture2D" uid="uid://08x7jrgfd7b8" path="res://2.png" id="2_hm208"]
@@ -10,33 +10,36 @@
 
 [node name="StartScreen" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_hm208")
 
 [node name="BackgroundFar" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -738.0
-offset_top = -395.0
-offset_right = 853.0
-offset_bottom = 578.0
+offset_left = -231.0
+offset_top = -123.0
+offset_right = 1360.0
+offset_bottom = 850.0
 texture = ExtResource("1_r2jwc")
-expand_mode = 1
 stretch_mode = 6
 
 [node name="BackgroundMid" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -742.0
-offset_top = -393.0
-offset_right = 851.0
-offset_bottom = 703.0
+offset_left = -235.0
+offset_top = -121.0
+offset_right = 1358.0
+offset_bottom = 975.0
 texture = ExtResource("2_hm208")
 
 [node name="BackgroundClose" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -737.0
-offset_top = -393.0
-offset_right = 858.0
-offset_bottom = 578.0
+offset_left = -230.0
+offset_top = -121.0
+offset_right = 1365.0
+offset_bottom = 850.0
 texture = ExtResource("3_5pab1")
 
 [node name="Menu" type="Control" parent="."]
@@ -51,6 +54,8 @@ offset_left = 432.0
 offset_top = 148.0
 offset_right = 735.0
 offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.011087579, 0.011087578, 0.01108758, 1)
+theme_override_colors/font_outline_color = Color(0.8346143, 0.8346143, 0.8346143, 1)
 theme_override_fonts/font = SubResource("FontVariation_tx5wa")
 theme_override_font_sizes/font_size = 54
 text = "Knighthood"
