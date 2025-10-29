@@ -2,8 +2,9 @@ extends CharacterBody2D
 
 const SPEED = 150.0
 const JUMP_VELOCITY = -400.0
-const GRAVITY = 980.0  # Explicit gravity value
+const GRAVITY = 980.0  
 
+@onready var jump_sound = $JumpSound
 func _physics_process(delta: float) -> void:
 	# Add gravity
 	if not is_on_floor():
@@ -11,6 +12,7 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		jump_sound.play()
 		velocity.y = JUMP_VELOCITY
 
 	# Get input direction

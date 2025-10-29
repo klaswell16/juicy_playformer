@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://m2nto4qrq5sw"]
+[gd_scene load_steps=13 format=4 uid="uid://m2nto4qrq5sw"]
 
 [ext_resource type="Texture2D" uid="uid://dj61u8wimdb7n" path="res://tilemap_packed.png" id="1_bs2ip"]
 [ext_resource type="PackedScene" uid="uid://bsrj0rjjr0j3p" path="res://scenes/platformer_player.tscn" id="2_yps6v"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c5u722066v58h" path="res://scenes/key.tscn" id="7_pfjqn"]
 [ext_resource type="PackedScene" uid="uid://c0ega4vjsklap" path="res://scenes/door.tscn" id="8_lsesv"]
 [ext_resource type="PackedScene" uid="uid://cip55p4q7bocg" path="res://scenes/enemy.tscn" id="9_lsesv"]
+[ext_resource type="AudioStream" uid="uid://bepa4cqgg7o1g" path="res://sounds/game-minecraft-gaming-background-music-402451.mp3" id="10_m533o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k3v11"]
 texture = ExtResource("1_bs2ip")
@@ -175,3 +176,7 @@ scene_to_load = "res://scenes/p_level_2.tscn"
 position = Vector2(546, 77)
 collision_layer = 2
 collision_mask = 2
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_m533o")
+autoplay = true
