@@ -7,7 +7,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func coin_collected():
-	$txtCoins.text = str( PlatformerGameController.coins_collected)
+	$txtCoins.text = "Coins: " + str(PlatformerGameController.coins_collected)
 	
 
 
