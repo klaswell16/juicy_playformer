@@ -7,10 +7,6 @@
 radius = 7.0
 height = 14.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ra3w"]
-atlas = ExtResource("2_md0e3")
-region = Rect2(0, 0, 24, 24)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_5uy6h"]
 atlas = ExtResource("2_md0e3")
 region = Rect2(0, 0, 24, 24)
@@ -19,16 +15,12 @@ region = Rect2(0, 0, 24, 24)
 atlas = ExtResource("2_md0e3")
 region = Rect2(24, 0, 24, 24)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ra3w"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(0, 0, 24, 24)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_xwavj"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4ra3w")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5uy6h")
@@ -37,7 +29,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_c4w8v")
 }],
 "loop": true,
-"name": &"run",
+"name": &"chase",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ra3w")
+}],
+"loop": true,
+"name": &"default",
 "speed": 5.0
 }]
 
@@ -50,5 +50,5 @@ shape = SubResource("CapsuleShape2D_q6mwf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xwavj")
-animation = &"run"
+animation = &"chase"
 autoplay = "default"

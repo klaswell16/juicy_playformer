@@ -14,10 +14,7 @@ func update_animation():
 	
 	if is_climbing:
 		# Handle ladder climbing animations
-		if abs(speed) > 0.1:  # If moving on ladder
-			animated_sprite.play("climb")
-		else:  # Idle on ladder
-			animated_sprite.play("climb_idle")  # or just "climb" if you don't have separate idle
+		animated_sprite.play("climb")  # or just "climb" if you don't have separate idle
 			
 	elif is_sliding:
 		# Wall sliding has highest priority after climbing
@@ -33,4 +30,4 @@ func update_animation():
 	else:
 		# Air movements (jumping/falling)
 		# You might want to add separate "jump" and "fall" animations later
-		animated_sprite.play("jump")  # or "default" if you don't have jump animation
+		animated_sprite.play("default")  # or "default" if you don't have jump animation

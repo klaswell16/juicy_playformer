@@ -1,6 +1,18 @@
-[gd_resource type="SpriteFrames" load_steps=23 format=3 uid="uid://d3kghq2eh0gdb"]
+[gd_resource type="SpriteFrames" load_steps=26 format=3 uid="uid://d3kghq2eh0gdb"]
 
 [ext_resource type="Texture2D" uid="uid://dsfxphv8rkcg0" path="res://sprites/knight.png" id="1_sdk4b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mm4vr"]
+atlas = ExtResource("1_sdk4b")
+region = Rect2(32, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ru2ri"]
+atlas = ExtResource("1_sdk4b")
+region = Rect2(64, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6jwm"]
+atlas = ExtResource("1_sdk4b")
+region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4nq8g"]
 atlas = ExtResource("1_sdk4b")
@@ -88,6 +100,25 @@ region = Rect2(224, 96, 32, 32)
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mm4vr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ru2ri")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6jwm")
+}],
+"loop": true,
+"name": &"climb_idle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4nq8g")

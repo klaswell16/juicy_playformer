@@ -16,6 +16,7 @@ func _physics_process(delta: float) -> void:
 	
 	if player_dir.length() < 150:
 		state = "chase"
+		$AnimatedSprite2D.play("chase")
 	else:
 		state = "idle"
 	
