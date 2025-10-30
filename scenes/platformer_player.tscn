@@ -10,6 +10,7 @@ radius = 7.0
 height = 20.0
 
 [node name="PlatformerPlayer" type="CharacterBody2D" groups=["player"]]
+z_index = 2
 collision_layer = 3
 script = ExtResource("1_cgtf5")
 
@@ -19,7 +20,6 @@ shape = SubResource("CapsuleShape2D_r1qwb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("2_js0t1")
-animation = &"on_wall"
 autoplay = "default"
 
 [node name="Animator" type="Node2D" parent="." node_paths=PackedStringArray("animated_sprite")]

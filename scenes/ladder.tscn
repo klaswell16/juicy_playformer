@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://5mmsubsu0pah"]
+
+[ext_resource type="Script" uid="uid://pwnha62l34sm" path="res://scripts/ladder.gd" id="1_xb1tl"]
+[ext_resource type="Texture2D" uid="uid://btqloest2liff" path="res://sprites/ladder.png" id="1_xxwne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xb1tl"]
+size = Vector2(20, 176)
+
+[node name="Ladder" type="Area2D"]
+script = ExtResource("1_xb1tl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -78)
+shape = SubResource("RectangleShape2D_xb1tl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -0.25)
+scale = Vector2(1, 1.0263158)
+texture = ExtResource("1_xxwne")
+
+[node name="Ladder" type="Sprite2D" parent="."]
+position = Vector2(0, -15)
+texture = ExtResource("1_xxwne")
+
+[node name="Ladder2" type="Sprite2D" parent="."]
+position = Vector2(0, -29)
+texture = ExtResource("1_xxwne")
+
+[node name="Ladder3" type="Sprite2D" parent="."]
+position = Vector2(0, -42)
+texture = ExtResource("1_xxwne")
+
+[node name="Ladder4" type="Sprite2D" parent="."]
+position = Vector2(0, -56)
+texture = ExtResource("1_xxwne")
+
+[node name="Ladder5" type="Sprite2D" parent="."]
+position = Vector2(0, -70)
+texture = ExtResource("1_xxwne")
+
+[node name="Ladder6" type="Sprite2D" parent="."]
+position = Vector2(0, -84)
+texture = ExtResource("1_xxwne")
+
+[node name="Ladder7" type="Sprite2D" parent="."]
+position = Vector2(0, -98)
+texture = ExtResource("1_xxwne")
+
+[node name="Ladder8" type="Sprite2D" parent="."]
+position = Vector2(0, -112)
+texture = ExtResource("1_xxwne")
+
+[node name="Ladder9" type="Sprite2D" parent="."]
+position = Vector2(0, -126)
+texture = ExtResource("1_xxwne")
+
+[node name="Ladder10" type="Sprite2D" parent="."]
+position = Vector2(0, -140)
+texture = ExtResource("1_xxwne")
+
+[node name="Ladder11" type="Sprite2D" parent="."]
+position = Vector2(0, -154)
+texture = ExtResource("1_xxwne")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
