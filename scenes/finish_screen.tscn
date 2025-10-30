@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bl44btvx4ql6v"]
+
+[node name="FinishScreen" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 516.0
+offset_top = 276.0
+offset_right = 663.0
+offset_bottom = 347.0
+text = "You are a knight"

@@ -7,8 +7,10 @@ const CLIMB_SPEED = 100.0
 
 var is_on_ladder = false
 var is_climbing = false
+var was_climbing = false
 
 @onready var jump_sound = $JumpSound
+@onready var climb_sound = $ClimbSound
 
 const WALL_JUMP_VELOCITY = Vector2(400, -450)  
 const WALL_SLIDE_SPEED = 100.0  
@@ -66,6 +68,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 	# Animation updates
+	handle_climbing_sound()
 	update_animations()
 	move_and_slide()
 
@@ -83,6 +86,20 @@ func handle_ladder_movement(delta):
 	else:
 		# Not on ladder
 		is_climbing = false
+		
+func handle_climbing_sound():
+	if is_climbing and abs(velocity.y) > 0:
+		# Playing and moving on ladder
+		if not climb_sound.playing:
+			climb_sound.play()
+	else:
+		# Not climbing or not moving
+		if climb_sound.playing:
+			climb_sound.stop()
+
+	
+	# Update previous state
+	was_climbing = is_climbing
 
 func update_animations():
 	if is_climbing:
@@ -102,3 +119,4 @@ func _on_ladder_entered():
 func _on_ladder_exited():
 	is_on_ladder = false
 	is_climbing = false
+	climb_sound.stop()

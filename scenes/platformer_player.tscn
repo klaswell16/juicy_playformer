@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bsrj0rjjr0j3p"]
+[gd_scene load_steps=7 format=3 uid="uid://bsrj0rjjr0j3p"]
 
 [ext_resource type="Script" uid="uid://bq47vdf87hqi8" path="res://scripts/platformer_player.gd" id="1_cgtf5"]
 [ext_resource type="SpriteFrames" uid="uid://d3kghq2eh0gdb" path="res://platformer_player_frames.tres" id="2_js0t1"]
 [ext_resource type="Script" uid="uid://b0cyianf0tyuk" path="res://scripts/platformer_animator.gd" id="3_iwf3b"]
 [ext_resource type="AudioStream" uid="uid://b33gdm13otbt1" path="res://sounds/jump.wav" id="4_p3eep"]
+[ext_resource type="AudioStream" uid="uid://by4neeay7ofdh" path="res://sounds/climb.wav" id="5_dlouo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r1qwb"]
 radius = 7.0
@@ -34,3 +35,6 @@ position_smoothing_enabled = true
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_p3eep")
 volume_db = -10.0
+
+[node name="ClimbSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_dlouo")
