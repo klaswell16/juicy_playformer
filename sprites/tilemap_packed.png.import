@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dol74x7vejgl3"
-path="res://.godot/imported/clouds_mg_1_lightened.png-caff71a839e93293918b9fe47bfaa7c6.ctex"
+uid="uid://dj61u8wimdb7n"
+path="res://.godot/imported/tilemap_packed.png-4c9bdbd02624781be861e74e46f9d602.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://clouds_mg_1_lightened.png"
-dest_files=["res://.godot/imported/clouds_mg_1_lightened.png-caff71a839e93293918b9fe47bfaa7c6.ctex"]
+source_file="res://sprites/tilemap_packed.png"
+dest_files=["res://.godot/imported/tilemap_packed.png-4c9bdbd02624781be861e74e46f9d602.ctex"]
 
 [params]
 

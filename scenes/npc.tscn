@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://c5jomn4jbk53d"]
 
 [ext_resource type="Script" uid="uid://bd1fqkue2hi7e" path="res://scripts/npc.gd" id="1_nh2m4"]
-[ext_resource type="Texture2D" uid="uid://wyx205o6yupd" path="res://tilemap-characters.png" id="2_abqhh"]
+[ext_resource type="Texture2D" uid="uid://wyx205o6yupd" path="res://sprites/tilemap-characters.png" id="2_abqhh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abqhh"]
 size = Vector2(49, 20)

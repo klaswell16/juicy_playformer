@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=4 uid="uid://chmddmf10mhfl"]
 
-[ext_resource type="Texture2D" uid="uid://dj61u8wimdb7n" path="res://tilemap_packed.png" id="1_wipo8"]
+[ext_resource type="Texture2D" uid="uid://dj61u8wimdb7n" path="res://sprites/tilemap_packed.png" id="1_wipo8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k3v11"]
 texture = ExtResource("1_wipo8")
-texture_region_size = Vector2i(18, 17)
+texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -50,6 +50,7 @@ texture_region_size = Vector2i(18, 17)
 0:5/0 = 0
 1:5/0 = 0
 2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:5/0 = 0
 5:5/0 = 0
 6:5/0 = 0
@@ -73,6 +74,7 @@ texture_region_size = Vector2i(18, 17)
 4:6/0 = 0
 3:6/0 = 0
 2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:6/0 = 0
 0:6/0 = 0
 0:7/0 = 0

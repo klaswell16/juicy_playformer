@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=4 uid="uid://pxn6v3sm3a6j"]
+[gd_scene load_steps=12 format=4 uid="uid://pxn6v3sm3a6j"]
 
-[ext_resource type="Texture2D" uid="uid://dj61u8wimdb7n" path="res://tilemap_packed.png" id="1_oluot"]
+[ext_resource type="Texture2D" uid="uid://dj61u8wimdb7n" path="res://sprites/tilemap_packed.png" id="1_oluot"]
 [ext_resource type="PackedScene" uid="uid://bsrj0rjjr0j3p" path="res://scenes/platformer_player.tscn" id="2_5wegr"]
 [ext_resource type="PackedScene" uid="uid://cip55p4q7bocg" path="res://scenes/enemy.tscn" id="3_gp4jo"]
 [ext_resource type="PackedScene" uid="uid://dlhoyg0tastj4" path="res://scenes/coin.tscn" id="4_mlv2b"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c0ega4vjsklap" path="res://scenes/door.tscn" id="5_pog8k"]
 [ext_resource type="PackedScene" uid="uid://llqyr2gno3j4" path="res://scenes/ui.tscn" id="6_ct1gs"]
 [ext_resource type="PackedScene" uid="uid://c5jomn4jbk53d" path="res://scenes/npc.tscn" id="8_u6f8o"]
+[ext_resource type="PackedScene" uid="uid://n32ds5w73jbq" path="res://scenes/bg_music.tscn" id="9_2k8nd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dl1x2"]
 texture = ExtResource("1_oluot")
@@ -255,3 +256,5 @@ position = Vector2(885, -116)
 [node name="NPC" parent="." instance=ExtResource("8_u6f8o")]
 z_index = 1
 position = Vector2(214, 130)
+
+[node name="BGMusic" parent="." instance=ExtResource("9_2k8nd")]

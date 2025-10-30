@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cip55p4q7bocg"]
 
 [ext_resource type="Script" uid="uid://bjvbmcnyla1pw" path="res://scripts/enemy.gd" id="1_btx3p"]
-[ext_resource type="Texture2D" uid="uid://wyx205o6yupd" path="res://tilemap-characters.png" id="2_md0e3"]
+[ext_resource type="Texture2D" uid="uid://wyx205o6yupd" path="res://sprites/tilemap-characters.png" id="2_md0e3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q6mwf"]
 radius = 7.0

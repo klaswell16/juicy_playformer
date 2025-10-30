@@ -1,6 +1,6 @@
 extends Control
 
-@export var parallax_strengths = [0.02, 0.04, 0.06]  # Far, Mid, Close
+@export var parallax_strengths = [0.02, 0.04, 0.06]  
 
 @onready var background_layers = [
 	$BackgroundFar,
@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 	var screen_center = get_viewport().get_visible_rect().size / 2
 	var base_offset = mouse_pos - screen_center
 	
-	# Apply different parallax to each layer
+	# Add parallax to layers
 	for i in range(background_layers.size()):
 		var layer = background_layers[i]
 		var strength = parallax_strengths[i]

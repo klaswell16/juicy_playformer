@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://chmddmf10mhfl" path="res://scenes/tile_map_layer.tscn" id="1_lsesv"]
 [ext_resource type="PackedScene" uid="uid://bsrj0rjjr0j3p" path="res://scenes/platformer_player.tscn" id="2_yps6v"]
 [ext_resource type="PackedScene" uid="uid://d3c4vbx3jro0q" path="res://scenes/parallax_background.tscn" id="4_m533o"]
+[ext_resource type="PackedScene" uid="uid://n32ds5w73jbq" path="res://scenes/bg_music.tscn" id="6_pfjqn"]
 [ext_resource type="PackedScene" uid="uid://c5u722066v58h" path="res://scenes/key.tscn" id="7_pfjqn"]
 [ext_resource type="PackedScene" uid="uid://c0ega4vjsklap" path="res://scenes/door.tscn" id="8_lsesv"]
 [ext_resource type="PackedScene" uid="uid://5mmsubsu0pah" path="res://scenes/ladder.tscn" id="10_lj8ir"]
-[ext_resource type="AudioStream" uid="uid://bepa4cqgg7o1g" path="res://sounds/game-minecraft-gaming-background-music-402451.mp3" id="10_m533o"]
 [ext_resource type="PackedScene" uid="uid://cip55p4q7bocg" path="res://scenes/enemy.tscn" id="11_lj8ir"]
 
 [node name="PLevel1" type="Node2D"]
@@ -27,10 +27,7 @@ position = Vector2(1642, 4)
 position = Vector2(2023, -96)
 scene_to_load = "res://scenes/p_level_2.tscn"
 
-[node name="BGMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_m533o")
-volume_db = -18.128
-autoplay = true
+[node name="BGMusic" parent="." instance=ExtResource("6_pfjqn")]
 
 [node name="Ladder" parent="." groups=["ladders"] instance=ExtResource("10_lj8ir")]
 position = Vector2(283, 280)

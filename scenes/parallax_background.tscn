@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://d3c4vbx3jro0q"]
 
 [ext_resource type="Texture2D" uid="uid://3ujiguu8ii5v" path="res://sprites/sky.png" id="1_r7lvs"]
-[ext_resource type="Texture2D" uid="uid://de0xhf05nj0va" path="res://clouds_bg.png" id="2_ljpgv"]
-[ext_resource type="Texture2D" uid="uid://dol74x7vejgl3" path="res://clouds_mg_1_lightened.png" id="3_bpahb"]
+[ext_resource type="Texture2D" uid="uid://de0xhf05nj0va" path="res://sprites/clouds_bg.png" id="2_ljpgv"]
+[ext_resource type="Texture2D" uid="uid://dol74x7vejgl3" path="res://sprites/clouds_mg_1_lightened.png" id="3_bpahb"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 
