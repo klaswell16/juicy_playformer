@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0po0nafdph7u"]
+
+[ext_resource type="Script" uid="uid://cmlf3lxn31313" path="res://scripts/lvl_2_door.gd" id="1_vs0xo"]
+[ext_resource type="Texture2D" uid="uid://cljgjdybjntba" path="res://sprites/idle_portal.png" id="2_67vro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_daog4"]
+
+[node name="Lvl2Door" type="Area2D"]
+script = ExtResource("1_vs0xo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_daog4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_67vro")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

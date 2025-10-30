@@ -7,7 +7,7 @@
 
 [node name="Door" type="Area2D"]
 script = ExtResource("1_vrwkx")
-scene_to_load = "res://platformer/scenes/p_level_1.tscn"
+scene_to_load = "res://scenes/p_level_2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)

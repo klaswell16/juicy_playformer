@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://cip55p4q7bocg" path="res://scenes/enemy.tscn" id="3_gp4jo"]
 [ext_resource type="PackedScene" uid="uid://dlhoyg0tastj4" path="res://scenes/coin.tscn" id="4_mlv2b"]
 [ext_resource type="PackedScene" uid="uid://d3c4vbx3jro0q" path="res://scenes/parallax_background.tscn" id="5_oluot"]
-[ext_resource type="PackedScene" uid="uid://c0ega4vjsklap" path="res://scenes/door.tscn" id="5_pog8k"]
 [ext_resource type="PackedScene" uid="uid://llqyr2gno3j4" path="res://scenes/ui.tscn" id="6_ct1gs"]
 [ext_resource type="PackedScene" uid="uid://c5jomn4jbk53d" path="res://scenes/npc.tscn" id="8_u6f8o"]
 [ext_resource type="PackedScene" uid="uid://n32ds5w73jbq" path="res://scenes/bg_music.tscn" id="9_2k8nd"]
+[ext_resource type="PackedScene" uid="uid://d0po0nafdph7u" path="res://scenes/lvl2_door.tscn" id="9_8yprh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dl1x2"]
 texture = ExtResource("1_oluot")
@@ -233,10 +233,6 @@ position = Vector2(37, 119)
 [node name="Enemy" parent="." instance=ExtResource("3_gp4jo")]
 position = Vector2(1008, 186)
 
-[node name="Door" parent="." instance=ExtResource("5_pog8k")]
-position = Vector2(1940, -145)
-scene_to_load = "res://p_level_1.tscn"
-
 [node name="ParallaxBackground" parent="." instance=ExtResource("5_oluot")]
 
 [node name="UI" parent="." instance=ExtResource("6_ct1gs")]
@@ -258,3 +254,6 @@ z_index = 1
 position = Vector2(214, 130)
 
 [node name="BGMusic" parent="." instance=ExtResource("9_2k8nd")]
+
+[node name="Lvl2Door" parent="." instance=ExtResource("9_8yprh")]
+position = Vector2(1967, -138)

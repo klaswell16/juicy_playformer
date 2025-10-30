@@ -1,8 +1,8 @@
 extends Area2D
 
-@export var scene_to_load : String
+
 @export var keys_needed = 1
-@export var coins_needed = 4
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,7 +17,6 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if PlatformerGameController.keys >= keys_needed:
-		get_tree().change_scene_to_file(scene_to_load)
-	elif PlatformerGameController.coins_collected >= coins_needed:
-		get_tree().change_scene_to_file("res://scenes/finish_screen.tscn")
+		get_tree().change_scene_to_file("res://scenes/p_level_2.tscn")
+	
 		pass # Replace with function body.
